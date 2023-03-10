@@ -33,14 +33,14 @@
                     "examples": {
                         "Users": {
                         "value": {
-                            "nomeCompleto": "Vanessa Ribeiro",
-                            "username": "Vanessa",
-                            "email": "vanessa@gmail.com",
-                            "telefone": 61984659874,
-                            "cpf": "04532198754",
-                            "idade": 30,
+                            "nomeCompleto": "Juquinha da Silva",
+                            "username": "Juca",
+                            "email": "juquinha123@gmail.com",
+                            "telefone": 61984758963,
+                            "cpf": "65924878510",
+                            "idade": 23,
                             "genero": "F",
-                            "nomeMae": "Vanessa Mãe",
+                            "nomeMae": "Sra. Juca",
                             "municipio": "Brasília",
                             "codMunIBGE": 5300108,
                             "estado": "Distrito Federal",
@@ -48,8 +48,8 @@
                             "faixaOlimpiada": "Médio",
                             "priEstudante": 1,
                             "stsRevEstd": "aprovado",
-                            "password": "teste123",
-                            "avatar": "https://i.imgur.com/Ry1cb5M.png",
+                            "password": "juca123",
+                            "avatar": "https://i0.wp.com/www.portaldodog.com.br/cachorros/wp-content/uploads/2017/06/husky-siberiano-noticias.jpg?w=920&ssl=1",
                             "background": "https://images.wallpapersden.com/image/download/triangle-8k-blue-pattern_bGZlbmiUmZqaraWkpJRmbmdlrWZlbWU.jpg"
                         }
                         }
@@ -194,8 +194,8 @@
         },
         "/auth": {
             "post": {
-              "summary": "Login to Breaking News",
-              "description": "Route responsible for logging in a registered user",
+              "summary": "Login no Sistema",
+              "description": "Rota responsável por logar um usuário cadastrado",
               "tags": ["Auth"],
               "requestBody": {
                 "content": {
@@ -226,8 +226,8 @@
           },
           "/news/": {
             "post": {
-              "summary": "Create a new news",
-              "description": "Route responsible for creating a new News",
+              "summary": "Criar postagem",
+              "description": "Rota responsável por criar uma nova postagem",
               "tags": ["News"],
               "security": [{ "bearerAuth": [] }],
               "requestBody": {
@@ -274,8 +274,8 @@
           },
           "/news": {
             "get": {
-              "summary": "Search all posts",
-              "description": "Route responsible for fetching all posts",
+              "summary": "Procurar todas as postagens",
+              "description": "Rota responsável por buscar todas as postagens",
               "tags": ["News"],
               "parameters": [
                 {
@@ -311,8 +311,8 @@
           },
           "/news/top": {
             "get": {
-              "summary": "Search top News",
-              "description": "Route responsible for fetching top News",
+              "summary": "Pesquisar as últimas postagens",
+              "description": "Rota responsável por buscar as últimas postagens",
               "tags": ["News"],
               "responses": {
                 "400": {
@@ -334,8 +334,8 @@
           },
           "/news/search": {
             "get": {
-              "summary": "Search News by title",
-              "description": "Route responsible for fetching the News that match the title sent via query params",
+              "summary": "Pesquisar postagem por título",
+              "description": "Rota responsável por buscar as postagens que correspondem ao título enviado via parâmetros de consulta",
               "tags": ["News"],
               "security": [{ "bearerAuth": [] }],
               "parameters": [
@@ -368,8 +368,8 @@
           },
           "/news/byUser": {
             "get": {
-              "summary": "Search news by use id",
-              "description": "Route responsible for fetching news by use id",
+              "summary": "Pesquisar postagens por id de usuário",
+              "description": "Rota responsável por pesquisar postagens por id de usuário",
               "tags": ["News"],
               "security": [{ "bearerAuth": [] }],
               "responses": {
@@ -397,8 +397,8 @@
           },
           "/news/{id}/": {
             "get": {
-              "summary": "Search News by id",
-              "description": "Route responsible for fetching News by id",
+              "summary": "Procurar por id de postagem",
+              "description": "Rota responsável por buscar postagens pelo id",
               "tags": ["News"],
               "security": [{ "bearerAuth": [] }],
               "parameters": [
@@ -433,8 +433,8 @@
           },
           "/news/{id}": {
             "patch": {
-              "summary": "Update a News",
-              "description": "Route responsible for updating a News",
+              "summary": "Atualizar postagem",
+              "description": "Rota responsável por atualizar uma postagem",
               "tags": ["News"],
               "security": [{ "bearerAuth": [] }],
               "parameters": [
@@ -487,8 +487,8 @@
           },
           "/news/{id}/": {
             "delete": {
-              "summary": "Delete a News",
-              "description": "Route responsible for deleting a News",
+              "summary": "Apagar postagem",
+              "description": "Rota responsável por apagar uma postagem",
               "tags": ["News"],
               "security": [{ "bearerAuth": [] }],
               "parameters": [
@@ -515,8 +515,8 @@
           },
           "/news/like/{id}/": {
             "patch": {
-              "summary": "Like a News",
-              "description": "Route responsible for liking a News",
+              "summary": "Curtir postagem",
+              "description": "Rota responsável pelas curtidas de postagem",
               "tags": ["News"],
               "security": [{ "bearerAuth": [] }],
               "parameters": [
@@ -543,8 +543,8 @@
           },
           "/news/comment/{id}/": {
             "patch": {
-              "summary": "Comment on a News",
-              "description": "Route responsible for commenting on a News",
+              "summary": "Comentar em um post",
+              "description": "Rota responsávei pelos comentários em um post",
               "tags": ["News"],
               "security": [{ "bearerAuth": [] }],
               "parameters": [
@@ -587,8 +587,8 @@
           },
           "/news/comment/{idNews}/{idComment}": {
             "patch": {
-              "summary": "Comment on a News",
-              "description": "Route responsible for commenting on a News",
+              "summary": "Apagar um comentário de um post",
+              "description": "Rota responsável por apagar um comentário de um post",
               "tags": ["News"],
               "security": [{ "bearerAuth": [] }],
               "parameters": [
